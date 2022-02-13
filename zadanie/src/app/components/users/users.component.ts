@@ -15,7 +15,6 @@ export class UsersComponent implements OnInit {
     
     this.getJSON().subscribe(res=> {
     this.users = res
-    console.log(this.users)
   })
 }
   
