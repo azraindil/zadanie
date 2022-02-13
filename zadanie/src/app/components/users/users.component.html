@@ -1,1 +1,28 @@
-<p>users works!</p>
+<div class="container m-5">
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Balance</th>
+                <th>Company</th>
+                <th>E-mail</th>
+                <th>Phone</th>
+                <th>Empty</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.gender}}</td>
+                <td>{{user.balance}}</td>
+                <td>{{user.company}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phone}}</td>
+                <td>narazie nic</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
