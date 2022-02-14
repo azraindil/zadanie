@@ -14,7 +14,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let user of users">
+            <tr *ngFor="let user of users; let i = index">
                 <td>{{user.id}}</td>
                 <td>{{user.name}}</td>
                 <td>{{user.gender}}</td>
@@ -23,8 +23,8 @@
                 <td>{{user.email}}</td>
                 <td>{{user.phone}}</td>
                 <td>
-                    <button type="button" id="info" class="btn btn-outline-light m-1">Info</button>
-                    <button type="button" id="edit" class="btn btn-outline-light m-1">Edit</button>
+                    <button type="button" id="info" class="btn btn-outline-light m-1" (click)="showInfo(i)">Info</button>
+                    <button type="button" id="edit" class="btn btn-outline-light m-1" (click)="edit()">Edit</button>
                 </td>
             </tr>
         </tbody>
