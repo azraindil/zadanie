@@ -3,6 +3,7 @@ import { HttpClient} from '@angular/common/http';
 import { User } from '../../models/User';
 import { Observable } from 'rxjs';
 import { ModalComponent } from 'src/app/modal/modal.component';
+import { FormComponent } from 'src/app/form/form.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -34,8 +35,10 @@ export class UsersComponent implements OnInit {
   const modalRef = this.modalService.open(ModalComponent);
   modalRef.componentInstance.info = this.users[i];
  }
- public edit(){
-  
+ public edit(i:number){
+  const modalRef = this.modalService.open(FormComponent);
+  modalRef.componentInstance.info = this.users[i];
+ 
  }
  
 }

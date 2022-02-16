@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<div class="modal-header">
+    <h4 class="modal-title">Edit</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+    <form>
+        <label class="col-form-label">Name: </label>
+        <input #nameInput type="text" class="form-control" value="{{info.name}}">
+
+        <label class="col-form-label">Gender: </label>
+        <input #genderInput type="text" class="form-control" value="{{info.gender}}">
+
+        <label class="col-form-label">Balance: </label>
+        <input #balanceInput name="balance" type="text" class="form-control" value="{{info.balance}}">
+
+        <label class="col-form-label">Company: </label>
+        <input #companyInput name="company" type="text" class="form-control" value="{{info.company}}">
+
+        <label class="col-form-label">E-mail: </label>
+        <input #emailInput name="email" type="text" class="form-control" value="{{info.email}}">
+
+        <label class="col-form-label">Phone: </label>
+        <input #phoneInput name="phone" type="text" class="form-control" value="{{info.phone}}">
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-outline-dark" (click)="saveEdited(nameInput.value, genderInput.value, balanceInput.value, companyInput.value, emailInput.value, phoneInput.value ); activeModal.close('Save click')">Save</button>
+            <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cancel</button>
+        </div>
+    </form>
+</div>
