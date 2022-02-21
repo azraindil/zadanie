@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <div class="container m-5">
-    <table class="table table-success table-striped">
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-bordered table-striped table-hover">
         <thead>
             <tr>
                 <th>ID</th>
@@ -26,10 +26,10 @@
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <button type="button" id="info" class="btn btn-outline-success m-1" (click)="showInfo(i)">Info</button>
                         <button type="button" id="edit" class="btn btn-outline-primary m-1" (click)="edit(i)">Edit</button>
+                        <button type="button" id="delete" class="btn btn-dark m-1" (click)="delete(i)">Delete</button>
                     </div>
                 </td>
             </tr>
         </tbody>
     </table>
-
 </div>

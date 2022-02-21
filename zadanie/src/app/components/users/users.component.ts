@@ -2,8 +2,8 @@ import { Component, ViewChild, OnInit } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { User } from '../../models/User';
 import { Observable } from 'rxjs';
-import { ModalComponent } from 'src/app/modal/modal.component';
-import { FormComponent } from 'src/app/form/form.component';
+import { ModalComponent } from 'src/app/components/modal/modal.component';
+import { FormComponent } from 'src/app/components/form/form.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
